@@ -20,7 +20,7 @@ If Not FileExists(@ScriptDir & "/load.ini") Then
 		$passw = InputBox("Password","Password per accedere al sito")
 		If @error = 1 Then Exit
 		IniWrite(@ScriptDir & "/load.ini","login","password",$passw)
-		MsgBox(0,"Fatto!","Fatto! Il programma ora si chiuder� per applicare le modifiche")
+		MsgBox(0,"Fatto!","Fatto! Il programma ora si chiudera per applicare le modifiche")
 	EndIf
 	Exit
 EndIf
@@ -71,7 +71,7 @@ EndFunc
 
 Func Button1Click()
 	GUICtrlSetState($Button1, $GUI_DISABLE)
-	$SelFile = InputBox("Nome File","Inserisci il NOME del file da scaricare (ricorda l'estensione!), verr�scaricato sul desktop. RICORDA DI RISPETTARE LE MAIUSCOLE!")
+	$SelFile = InputBox("Nome File","Inserisci il NOME del file da scaricare (ricorda l'estensione!), verra scaricato sul desktop. RICORDA DI RISPETTARE LE MAIUSCOLE!")
 	If @error Then
 		GUICtrlSetState($Button1, $GUI_ENABLE)
 		Return($Form1)
