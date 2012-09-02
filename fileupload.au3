@@ -20,7 +20,7 @@ If Not FileExists(@ScriptDir & "/load.ini") Then
 		$passw = InputBox("Password","Password per accedere al sito")
 		If @error = 1 Then Exit
 		IniWrite(@ScriptDir & "/load.ini","login","password",$passw)
-		MsgBox(0,"Fatto!","Fatto! Il programma ora si chiuderà per applicare le modifiche")
+		MsgBox(0,"Fatto!","Fatto! Il programma ora si chiuderï¿½ per applicare le modifiche")
 	EndIf
 	Exit
 EndIf
@@ -53,9 +53,6 @@ While 1
 WEnd
 
 Func Connect()
-;~ $server = 'redfenix.altervista.org' ;nome del sito web (es. sito.altervista.org)
-;~ $username = 'redfenix' ;nome utente
-;~ $pass = 'd4rk3dox' ;password
 $Open = _FTP_Open('MyFTP Control')
 $Conn = _FTP_Connect($Open, $server, $username, $pass)
 If $Open = 0 Then
@@ -74,7 +71,7 @@ EndFunc
 
 Func Button1Click()
 	GUICtrlSetState($Button1, $GUI_DISABLE)
-	$SelFile = InputBox("Nome File","Inserisci il NOME del file da scaricare (ricorda l'estensione!), verrà scaricato sul desktop. RICORDA DI RISPETTARE LE MAIUSCOLE!")
+	$SelFile = InputBox("Nome File","Inserisci il NOME del file da scaricare (ricorda l'estensione!), verrï¿½ scaricato sul desktop. RICORDA DI RISPETTARE LE MAIUSCOLE!")
 	If @error Then
 		GUICtrlSetState($Button1, $GUI_ENABLE)
 		Return($Form1)
