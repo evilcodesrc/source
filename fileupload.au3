@@ -71,12 +71,12 @@ EndFunc
 
 Func Button1Click()
 	GUICtrlSetState($Button1, $GUI_DISABLE)
-	$SelFile = InputBox("Nome File","Inserisci il NOME del file da scaricare (ricorda l'estensione!), verr� scaricato sul desktop. RICORDA DI RISPETTARE LE MAIUSCOLE!")
+	$SelFile = InputBox("Nome File","Inserisci il NOME del file da scaricare (ricorda l'estensione!), verr�scaricato sul desktop. RICORDA DI RISPETTARE LE MAIUSCOLE!")
 	If @error Then
 		GUICtrlSetState($Button1, $GUI_ENABLE)
 		Return($Form1)
 	EndIf
-	GUICtrlSetData($Label,"Scarico...")
+	GUICtrlSetData($Label,"Scarico....")
 	If InetGetSize("http://"&$server&"/ul/" & $SelFile) = 0 Then
 		GUICtrlSetData($Label,"Il file non esiste!")
 		GUICtrlSetState($Button1, $GUI_ENABLE)
